@@ -6,7 +6,7 @@ public class QuizGame {
 		// Create a variable to hold the user's score. Set it equal to zero. 
 		
 		// ASK A QUESTION AND CHECK THE ANSWER
-		
+		String question = JOptionPane.showInputDiolog()
 				// 2.  Ask the user a question 
 				
 				// 3.  Use an if statement to check if their answer is correct
