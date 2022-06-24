@@ -14,7 +14,7 @@ public class QuizGame {
 				score = score + 1;
 			}
 				// 3.  Use an if statement to check if their answer is correct
-		String question2 = JOptionPane.showInputDialog("Who is the main antagonist in Hollow Kmight");		
+		String question2 = JOptionPane.showInputDialog("Who is the main antagonist in Hollow Knight");		
 				// 4.  if the user's answer was correct, add one to their score 
 		if(question2.equals("The Radiance.")) {
 			score = score + 1;
