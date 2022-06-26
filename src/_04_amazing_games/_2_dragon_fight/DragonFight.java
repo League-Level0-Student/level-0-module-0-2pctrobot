@@ -10,8 +10,8 @@ public class DragonFight {
 
 		Random ran = new Random();    //This will be used later to make random numbers. 
 
-		ImageIcon dragon = new ImageIcon("src/_04_amazing_games/_2_dragon_fight/dragonPicture.jpg");
-		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
+		ImageIcon dragon = new ImageIcon("src/_04_amazing_games/_2_dragon_fight/The_Hollow_Knight_Idle.png");
+		JOptionPane.showMessageDialog(null, "Defeat the Hollow Knight and destroy the Infection!", "Dragon Fighter", 0, dragon);
 
 		// 1. Create some variables to hold health levels
 		int dragonHealth = 100;
@@ -32,43 +32,40 @@ public class DragonFight {
 		while (true) {
 
 			// THE PLAYER ATTACKS THE DRAGON
-String attack = JOptionPane.showInputDialog("ATTACK THE DANGER SNEK!");
+String attack = JOptionPane.showInputDialog("Attack the Hollow Knight!");
 				// 3. Ask the player in a pop-up if they want to attack the dragon with a yell
 				// or a kick
-	if(attack.equals(Kick)) {
-	
+	if(attack.equals("Slash")) {
+		playerAttack=ran.nextInt(11);
+		dragonHealth -= playerAttack;
 	}
-					  // -- Find a random number between 0 and 10 and store it in playerAttack. Use
-					  // ran.nextInt(10)
-			
-				// 5. If they typed in "kick":
 	
-					  // -- Find a random number between 0 and 25 and store it in playerAttack.
-		
-				// 6. Subtract the player attack value from the dragon's health
-
-			// THE DRAGON RETALIATES
-
-				// 7. Find a random number between 0 and 35 and store it in dragonAttack
+	if(attack.equals("Spell"))	{			
+		playerAttack=ran.nextInt(26);
+		dragonHealth -= playerAttack;
+	}			
 	
-				// 8. Subtract the dragon attack value from the player's health
+	if(attack.equals("Focus"))	{
+		playerAttack=ran.nextInt(10);
+		playerHealth += playerAttack;
+	}			
 
-			// ASSESS THE DAMAGE
+	dragonAttack = ran.nextInt(16);
+	playerHealth -= dragonAttack;	
 
 				// 9. If the player's health is less than or equal to 0, the game is over,
 				//    call the playerLost() method
-	
-			
-				// 10. If the dragon's health is less than or equal to 0, the game is over,
+	if(playerHealth<=(0))	{
+		playerLost();	
+	}			// 10. If the dragon's health is less than or equal to 0, the game is over,
 				//     call the dragonLost() method
-
-			
-				// 11.  Pop up a message that tells us how much health the player and
+	if(dragonHealth<=(0)) {
+		dragonLost();	
+	}			// 11.  Pop up a message that tells us how much health the player and
 				// 		dragon have left.
-
+	JOptionPane.showMessageDialog(null,"THK Health: " + dragonHealth + " Player Health: " + playerHealth);
 			
-			// (Bonus: Also display the amount of health that was lost by each in this
-			// round)
+			
 			
 
 		} // this is the end of the while loop
@@ -77,14 +74,14 @@ String attack = JOptionPane.showInputDialog("ATTACK THE DANGER SNEK!");
 
 	static void playerLost() {
 		// 11. Tell the player that they have been defeated by the dragon and have no treasure
-
+		JOptionPane.showMessageDialog(null, "You are dead. You couldn't do it. Sad.");
 
 		System.exit(0);   //This code ends the program
 	}
 
 	static void dragonLost() {
 		// 12. Tell the user that the dragon has been defeated and they get a ton of gold!
-
+		JOptionPane.showMessageDialog(null,"You have slain the Hollow Knight.");
 		System.exit(0);   //This code ends the program
 	}
 

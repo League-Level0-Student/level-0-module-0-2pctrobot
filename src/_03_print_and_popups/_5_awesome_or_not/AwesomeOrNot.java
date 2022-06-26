@@ -12,7 +12,7 @@ public static void main(String[] args) {
 
 	
 Random ran = new Random();    //This will be used below to make a random number. 
-		int randNum = ran.nextInt(1);
+		int randNum = ran.nextInt(4);
 		JOptionPane.showInputDialog("Enter something that you think is cool");
 	if(randNum == 3) {
 	JOptionPane.showMessageDialog(null, "Yes that is cool");
