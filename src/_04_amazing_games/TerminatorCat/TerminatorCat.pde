@@ -9,22 +9,22 @@
 // This line of code creates a variable to hold your faccate picture
 // You will use it later.
 PImage cat;
-int x=0;
-int y=0;
+int x=535;
+int y=377;
 
 void setup() {
   
 // 2. The code below loads your cat picture into the program. 
 //     Make sure the file name is correct for the cat image you saved earlier
-cat = loadImage("cat.jpg");
+cat = loadImage("catloaf.png");
   
 // 3. Set the size of the sketch. Make it big enough to show the cat you chose.
-
+size(1200,630);
 // 4. Resize the cat so it is the same size as the sketch
 
 // 5. DRAW CAT.    Use the background() command to make the cat the background of the sketch
 //    Run the program to see if the cat is drawn. Get this working before you go on.
- 
+ background(cat);
 
   }
 
@@ -43,25 +43,34 @@ void draw() {
 
 // 8. DRAW CIRCLES.
 //     The circles will have black lines around them by default. Put noStroke(); here to remove them.
-
+noStroke();
 // 9.  COLOR.  Set the color of your ellipse to the laser color you would like
 //    Remember to use the   fill()  command to set colors.
-
+fill(#fcba03);
 
 // 10 Use the ellipse() command to draw a circle on the eye (you will have to guess its size). 
 //    Use the x and y variables you just created to place the ellipse in the correct location.
 //                  The ellipse command looks like this:
-                ellipse(x, y, width, height);
-// Run the program to make sure it is in the right place and is the right size.
+                ellipse(x, y, 100, 100);
+ ellipse(x+236, y+12, 100, 100);
 }
 
 // 11.  LASER BEAM.  This code will make your ellipse move down and to the right when you press 
 //      the space bar. Run the program to test it.
 //      If you want it to move to the left, change to x-1=.
 void keyPressed() {
+  if (keyCode == 38){
+    x+=0;
+    y-=1;}
+  if (keyCode == 37){
+    x-=1;
+    y+=0;}
+  if (keyCode == 39){
     x+=1;
-    y+=1;
-    
+    y+=0;}
+  if (keyCode == 40){
+    x+=0;
+    y+=1; }
 // 12.  If you want them to go faster, add more than one each time the key is pressed    
 }
  
