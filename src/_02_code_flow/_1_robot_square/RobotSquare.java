@@ -45,10 +45,11 @@ public class RobotSquare {
     	//        so it is between the curly braces like the example below. 
     	//        The code in the loop will now repeat 4 times to draw a square.
     	
-    	     while ( count < 360 ) { 
+    	     while ( count < 720 ) { 
     	            rob.move(3);
-    	            rob.turn(1);
+    	            rob.turn(-1);
     	             count += 1;
+    	             rob.setRandomPenColor();
     	      }
     	 
     	
