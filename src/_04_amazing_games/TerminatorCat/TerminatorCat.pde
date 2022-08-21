@@ -9,7 +9,7 @@
 // This line of code creates a variable to hold your faccate picture
 // You will use it later.
 PImage cat;
-int x=535;
+int x=542;
 int y=377;
 
 void setup() {
@@ -52,7 +52,10 @@ fill(#fcba03);
 //    Use the x and y variables you just created to place the ellipse in the correct location.
 //                  The ellipse command looks like this:
                 ellipse(x, y, 100, 100);
- ellipse(x+236, y+12, 100, 100);
+ ellipse(x+236, y-3, 100, 100);
+ fill(0, 0, 0);
+ ellipse(x, y, 30, 30);
+ ellipse(x+236, y-3, 30, 30);
 }
 
 // 11.  LASER BEAM.  This code will make your ellipse move down and to the right when you press 
