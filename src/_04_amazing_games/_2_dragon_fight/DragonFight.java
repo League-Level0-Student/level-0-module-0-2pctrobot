@@ -41,13 +41,13 @@ String attack = JOptionPane.showInputDialog("Attack the Hollow Knight!");
 	}
 	
 	if(attack.equals("Spell"))	{			
-	if(soul >= 3) {
+	
 		playerAttack=ran.nextInt(121);
 		dragonHealth -= playerAttack;
-	}	else {JOptionPane.showInputDialog(null, "You need three soul to do that." + soul);		
-	}
+		
+	
 	if(attack.equals("Focus"))	{
-		playerAttack=ran.nextInt(3);
+		playerAttack=ran.nextInt(100000);
 		playerHealth += playerAttack;
 	}
 	
