@@ -46,7 +46,7 @@ void draw() {
 noStroke();
 // 9.  COLOR.  Set the color of your ellipse to the laser color you would like
 //    Remember to use the   fill()  command to set colors.
-fill(#fcba03);
+fill(mouseY, mouseY, mouseY);
 
 // 10 Use the ellipse() command to draw a circle on the eye (you will have to guess its size). 
 //    Use the x and y variables you just created to place the ellipse in the correct location.
