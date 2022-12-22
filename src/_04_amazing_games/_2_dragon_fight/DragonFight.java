@@ -47,7 +47,7 @@ String attack = JOptionPane.showInputDialog("Attack the Hollow Knight!");
 		
 	
 	if(attack.equals("Focus"))	{
-		playerAttack=ran.nextInt(100000);
+		playerAttack=ran.nextInt(2);
 		playerHealth += playerAttack;
 	}
 	
@@ -88,7 +88,7 @@ String attack = JOptionPane.showInputDialog("Attack the Hollow Knight!");
 	static void dragonLost() {
 		// 12. Tell the user that the dragon has been defeated and they get a ton of
 		// gold!
-		JOptionPane.showMessageDialog(null, "You have slain the Hollow Knight.");
+		JOptionPane.showMessageDialog(null, "You have slain the Hollow Knight. You are now the Hollow Knight. It's not great.");
 		System.exit(0); // This code ends the program
 	}
 
